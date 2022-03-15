@@ -1,0 +1,14 @@
+SELECT * FROM ANIMAL_INS ORDER BY ANIMAL_ID
+
+
+SELECT ____
+
+____에는 정보 획득을 원하는 칼럼의 이름
+
+FROM ____
+
+____에는 조회 대상이 되는 테이블의 이름
+
+ORDER BY ____
+____에는 정렬 기준이 되는 칼럼의 이름
+오름차순(ASC)이 Default 값으로 내림차순 정렬을 원하면 ORDER BY ANIMAL_ID(DESC)로 사용
