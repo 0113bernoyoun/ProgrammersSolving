@@ -1,0 +1,7 @@
+SELECT ANIMAL_ID, NAME FROM ANIMAL_INS WHERE INTAKE_CONDITION = "Sick"
+
+
+
+
+
+WHERE 조건절을 이용해 INTAKE_CONDITION 칼럼을 대상으로 값이 "Sick"인 레코드를 조회해서 ANIMAL_ID와 NAME만 보여준다.
