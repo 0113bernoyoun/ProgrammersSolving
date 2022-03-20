@@ -1,0 +1,13 @@
+SELECT ANIMAL_ID, NAME, DATETIME
+FROM ANIMAL_INS
+ORDER BY NAME , DATETIME DESC ;
+
+
+
+
+ANIMAL_INS 테이블에서 ANIMAL_ID와 NAME, DATETIME 칼럼을 본다.
+다만 이름과 DATETIME으로 정렬을 해야한다. 이름이 같으면 보호를 나중에 한 동물이 우선정렬이다.
+
+ORDER BY 절에서는 기준마다 ASC(기본값)와 DESC가 들어갈 수 있다.
+
+ORDER BY NAME DESC, DATETIME DESC와 같은 형태도 가능하다.
