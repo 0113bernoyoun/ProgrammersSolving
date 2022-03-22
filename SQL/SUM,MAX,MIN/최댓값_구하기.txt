@@ -1,0 +1,8 @@
+-- 코드를 입력하세요
+SELECT MAX(DATETIME) as "시간"
+FROM  ANIMAL_INS;
+
+
+
+
+ANIMAL_INS 테이블에서 DATETIME칼럼 중 가장 큰 값만을 보여준다. 단 여기서 as 키워드를 이용하여 보여줄 때는 칼럼명을 시간으로 보여준다.
