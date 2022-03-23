@@ -1,0 +1,5 @@
+-- 코드를 입력하세요
+SELECT MIN(DATETIME) AS "시간" FROM ANIMAL_INS
+
+
+ANIMAL_INS테이블에서 DATETIME칼럼 중 가장 작은 값(MIN)의 레코드만 가져오는데 칼럼을 "시간"으로 바꿔서 보여준다.
