@@ -1,0 +1,7 @@
+SELECT COUNT(ANIMAL_ID) as "COUNT"
+FROM ANIMAL_INS
+
+
+
+COUNT함수를 이용하면 해당 결과의 개수를 알 수 있다.
+ANIMAL_ID의 개수를 구한 후 해당 칼럼을 COUNT라는 이름으로 보여준다.
