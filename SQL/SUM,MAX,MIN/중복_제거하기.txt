@@ -1,0 +1,8 @@
+SELECT COUNT(DISTINCT(NAME)) as "count"
+FROM ANIMAL_INS
+
+
+
+
+ANIMAL_INS 테이블에서 count NAME칼럼을 보여주는데 DISTINCT키워드를 이용하면 그 칼럼에서 중복을 제거할 수 있다.
+이렇게 제거된 값을 COUNT로 계산하여 보여주는데 보여줄때 이름을 "count"라 한다.
