@@ -1,0 +1,16 @@
+SELECT ANIMAL_TYPE, COUNT(ANIMAL_TYPE) as count FROM ANIMAL_INS GROUP BY ANIMAL_TYPE ORDER BY ANIMAL_TYPE
+
+
+
+
+
+ANIMAL_TYPE과 그 ANIMAL_TYPE의 수를 획득하고자한다.
+
+단 각 종류에 대해 몇마리가 있는지 묶어서 알기 위해 GROUP BY절을 이용해
+ANIMAL_TYPE을 묶는다.
+
+순서는 다음과 같다.
+FROM ANIMAL_INS : ANIMAL_INS 테이블에서
+GROUP BY ANIMAL_TYPE : ANIMAL_TYPE을 같은 값 끼리 묶는다(Grouping)한다.
+ORDER BY ANIMLA_TYPE : Grouping된 데이터를 ANIMAL_TYPE을 기준으로 오름차순 정렬한다.
+SELECT ANIMAL_TYPE, COUNT(ANIMAL_TYPE) : Grouping된 데이터에서 ANIMAL_TYPE과 각 개수(COUNT)를 획득한다.
