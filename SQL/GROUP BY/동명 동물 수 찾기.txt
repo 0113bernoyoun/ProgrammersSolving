@@ -1,0 +1,10 @@
+SELECT NAME, COUNT(NAME) as 'COUNT' FROM ANIMAL_INS
+GROUP BY NAME
+HAVING COUNT(NAME) >= 2
+ORDER BY NAME
+
+
+
+ANIMAL_INS테이블에서 NAME을 기준으로 Grouping한 다음
+그 중 동일한 NAME이 2개 이상인(중복된) 레코드를 찾아 이름순으로 정렬한다.
+그 후 해당 레코드에서 NAME과 그 개수를 카운트한 COUNT(NAME)을 반환한다.
