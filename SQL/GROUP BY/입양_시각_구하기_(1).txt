@@ -1,0 +1,8 @@
+SELECT HOUR(DATETIME) as HOUR, COUNT(ANIMAL_ID) as "COUNT" FROM ANIMAL_OUTS
+WHERE HOUR(DATETIME) >= 9 and HOUR(DATETIME) <20
+GROUP BY HOUR(DATETIME)
+ORDER BY HOUR
+
+
+ANIMAL_OUTS 테이블에서 HOUR()함수를 이용해 DATETIME의 시간만을 가져온 후 그 시간이 9시부터 19시까지인 데이터를 가져온다.
+그 데이터를 DATETIME을 기준으로 Grouping한 다음 HOUR을 기준으로 정렬한다.
