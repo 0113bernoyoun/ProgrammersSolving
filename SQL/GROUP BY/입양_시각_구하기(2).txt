@@ -1,0 +1,36 @@
+SET @HOUR = -1;
+SELECT (@HOUR := @HOUR + 1) AS "HOUR",
+(SELECT COUNT(HOUR(DATETIME))
+ FROM ANIMAL_OUTS
+ WHERE HOUR(DATETIME)=@HOUR) AS COUNT
+FROM ANIMAL_OUTS
+WHERE @HOUR < 23;
+
+
+
+
+
+문제가 Group by로 풀라고 하는 문제가 맞나 싶긴 하다..
+
+일단 데이터를 강제로 만들어줘야한다.
+0시부터 23시까지의 데이터를 필요로 하는데 변수를 만들기 위해서 SET구문을 사용한다.
+SET 뒤에 선언하는 변수는 앞에 @를 붙여 변수임을 명시한다.
+
+구문을 각각 떼어서 봐야한다.
+SET @HOUR = -1;
+SELECT (@HOUR := @HOUR + 1) AS "HOUR",
+FROM ANIMAL_OUTS
+WHERE @HOUR < 23;
+
+이렇게 있으면 HOUR칼럼에 0부터 23까지 하나씩 추가된다.
+이제 그때 당시 데이터를 COUNT에 넣어야한다.
+(SELECT COUNT(HOUR(DATETIME))
+ FROM ANIMAL_OUTS
+ WHERE HOUR(DATETIME)=@HOUR) AS COUNT
+
+
+이렇게 통으로 넣을 수 있다.
+ANIMAL_OUTS테이블에서 HOUR(DATETIME)값과 우리가 만들어서 점점 증가되고 있는 @HOUR의 값이 같은 애들만
+속속 골라서 COUNT를 하여 데이터로 사용한다.
+
+
