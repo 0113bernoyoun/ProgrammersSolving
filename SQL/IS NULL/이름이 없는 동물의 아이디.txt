@@ -1,0 +1,5 @@
+SELECT ANIMAL_ID FROM ANIMAL_INS WHERE NAME is NULL
+
+
+이름이 없는건 NULL로 표시된다.
+WHERE 조건절로 NAME이 NULL인지 판별하면 되는데 = 이나 == 로 하는게 아니라 is로 비교한다.
