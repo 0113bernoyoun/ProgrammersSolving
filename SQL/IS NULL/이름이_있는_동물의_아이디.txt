@@ -1,0 +1,11 @@
+SELECT ANIMAL_ID
+FROM ANIMAL_INS
+WHERE NAME IS NOT NULL;
+
+
+
+
+이번에는 NULL이 아닌 걸 구하면 된다.
+
+
+VALUE IS NULL 이 아닌 VALUE IS NOT NULL 로 하면 된다.
