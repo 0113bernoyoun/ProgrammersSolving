@@ -1,0 +1,16 @@
+SELECT ANIMAL_ID, NAME,
+CASE
+    WHEN SEX_UPON_INTAKE LIKE "%neuterEd%" THEN "O"
+    WHEN SEX_UPON_INTAKE LIKE "%spAyed%" THEN "O"
+    ELSE "X"
+END
+AS "중성화"
+FROM ANIMAL_INS
+ORDER BY ANIMAL_ID
+
+
+
+
+중성화 여부에 따라 "O", "X"를 하기 위해 CASE문을 사용한다.
+SEX_UPON_INTAKE의 값이 특정 조건에 만족하면 "O"를 반환하게 한다.
+CASE문이 끝나면 END로 닫아준다.
